@@ -38,8 +38,10 @@ An example layout should be:
 
     so on ...
 
-So the convention is that the name of directory to contain source does should _match the name of
-remote repository_.
+So the convention is that the name of directory to contain source code should _match the name of
+remote repository_:
+
+    $url/$directory-name.git
 
 A plugin goes through the list of repositories and asynchronously push data into a remote git servers.
 An asynchronous behavior is implimented by simple Linux background process using `&`.  
