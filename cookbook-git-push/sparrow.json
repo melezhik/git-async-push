@@ -1,7 +1,7 @@
 {
 
   "name": "cookbook-git-push",
-  "version" : "0.1.0",
+  "version" : "0.1.3",
   "url" : "https://bitbucket.org/melezhik/nibr-sparrow/src",
   "description" : "Make a bulk push of chef cookbooks source code into BitBucket Git Repositories"
 }
