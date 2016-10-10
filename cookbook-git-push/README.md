@@ -10,7 +10,7 @@ Make a bulk push of chef cookbooks source code into BitBucket Git Repositories.
 
 # USAGE
 
-    sparrow plg run cookbook-git-update --param url=https://bitbucket.org/nibrdevops/ \
+    sparrow plg run cookbook-git-push --param url=https://bitbucket.org/nibrdevops \
     --param local_dir=/path/to/chef/cookbooks/repository
 
 
