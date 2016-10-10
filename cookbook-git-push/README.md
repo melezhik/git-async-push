@@ -1,11 +1,11 @@
 # SYNOPSIS
 
-Make a bulk upload of chef cookbooks source code into Git
+Make a bulk push of chef cookbooks source code into BitBucket Git Repositories.
 
 
 # INSTALL
 
-    sparrow plg install cookbook-git-update
+    sparrow plg install cookbook-git-push
 
 
 # USAGE
@@ -18,7 +18,7 @@ Make a bulk upload of chef cookbooks source code into Git
 
 ## url
 
-This should be bitbucket URL representing a team to hold a project where cookbooks git repository belongs to
+This should be a bitbucket URL _representing_ a team to hold a project where cookbooks git repository belongs to
 
 ## local_dir
 
@@ -33,4 +33,8 @@ as the directory where a cookbooks source resides at. And example layout should 
 
     so on ...
 
+
+# Author
+
+Alexey Melezhik
 

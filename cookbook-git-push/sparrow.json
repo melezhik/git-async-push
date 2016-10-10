@@ -1,0 +1,7 @@
+{
+
+  "name": "cookbook-git-push",
+  "version" : "0.1.0",
+  "url" : "",
+  "description" : "Make a bulk push of chef cookbooks source code into BitBucket Git Repositories"
+}
