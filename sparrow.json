@@ -2,6 +2,6 @@
 
   "name": "git-async-push",
   "version" : "0.1.2",
-  "url" : "https://bitbucket.org/melezhik/nibr-sparrow/src",
+  "url" : "https://github.com/melezhik/git-async-push",
   "description" : "Make an asynchronous push to remote git repositories"
 }
