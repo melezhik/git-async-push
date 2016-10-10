@@ -1,6 +1,6 @@
 # SYNOPSIS
 
-Make a asynchronous push to remote git repositories.
+Make an asynchronous push to remote git repositories.
 
 
 # INSTALL

@@ -1,7 +1,7 @@
 {
 
   "name": "git-async-push",
-  "version" : "0.1.1",
+  "version" : "0.1.2",
   "url" : "https://bitbucket.org/melezhik/nibr-sparrow/src",
-  "description" : "Make a asynchronous push to remote git repositories"
+  "description" : "Make an asynchronous push to remote git repositories"
 }
