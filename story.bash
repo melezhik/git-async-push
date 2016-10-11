@@ -1,16 +1,12 @@
 local_dir=$(config local_dir)
 export url=$(config url)
 
+echo url: $url
+echo local_dir: $local_dir
 
 cd $local_dir
 
-echo url: $url
-echo local_dir: $local_dir
-echo pwd: `pwd`
-
-
-find -maxdepth 1 -mindepth 1 -type d \
--execdir perl6 -e 'say "cd " ~ $*CWD.basename 
-~ " ; (git  push --set-upstream %*ENV<url>/" 
-~ $*CWD.basename ~ " master  -q  || echo " 
-~ $*CWD.basename  ~ " --- failed ) &  cd ../ " ' \; | bash  && echo git-async-push-done
+find $local_dir -maxdepth 1 -mindepth 1 -type d -execdir perl -MFile::Basename \
+-e 'my $p = basename(@ARGV[0]); my $wd = $ARGV[1]; 
+print "cd $wd/$p && ( git push --set-upstream $ENV{url}/$p master -q ",
+" || echo $p -- failed ) & \n"' {} $local_dir \; | bash && echo git-async-push-done
