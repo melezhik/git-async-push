@@ -49,6 +49,14 @@ names of the _remote git repositories_ :
 A plugin goes through the list of repositories and asynchronously push data into a remote git repos.
 An asynchronous behavior is implemented by simple Linux background process using `&`.  
 
+## project
+
+Only proceed a given project. Should be a name of sub directory inside `$local_dir`
+
+For example:
+
+    --param project=baz
+    
 # Author
 
 Alexey Melezhik
