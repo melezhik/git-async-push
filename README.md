@@ -10,44 +10,43 @@ Make an asynchronous push to remote git repositories.
 
 # USAGE
 
-    sparrow plg run git-async-push --param url=https://github.com/melezhik \
+    sparrow plg run git-async-push --param git_remote=https://github.com/melezhik \
     --param local_dir=/path/to/local/git/repositories/
 
 
 # Parameters
 
-## url
+## git_remote
 
 This should be a remote git repository URL _representing_ a realm of your multiple repositories.
 
 For example, if you use BitBucket, this could be a `team` container:
 
-    --param url=https://bitbucket.org/my-cool-team
+    --param git_remote=https://bitbucket.org/my-cool-team
 
 ## local_dir
 
 This should be a local path to a directory containing a _local git repositories_ to get pushed.
 
-An example layout should be:
+So an example layout should be:
 
     # local_dir:
     /home/melezhik/repos/
 
     # foo repository:
-    /home/melezhik/repos/foo/ -- remote git url ---> $url/foo.git
+    /home/melezhik/repos/foo/ -- remote git url ---> $git_remote/foo.git
 
     # baz repository:
-    /home/melezhik/repos/baz/ -- remote git url ---> $url/baz.git
-
+    /home/melezhik/repos/baz/ -- remote git url ---> $git_remote/baz.git
 
     so on ...
 
-So the convention is that the name of directory to contain source code should _match_
-_remote repository url_:
+So the convention is that the names of the sub directories at the `$local_dir` should _match_ 
+names of the _remote git repositories_ :
 
-    $url/$directory-name.git
+    $git_remote/$directory.git
 
-A plugin goes through the list of repositories and asynchronously push data into a remote git servers.
+A plugin goes through the list of repositories and asynchronously push data into a remote git repos.
 An asynchronous behavior is implemented by simple Linux background process using `&`.  
 
 # Author
