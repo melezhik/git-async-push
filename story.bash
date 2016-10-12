@@ -21,3 +21,5 @@ if ($project){
 print "cd $wd/$p && ( git pull $git_remote/$p.git && \\
 git push --set-upstream $git_remote/$p.git master  -q",
 " || echo $p -- failed ) & \n"' {} $local_dir \; | bash && echo git-async-push-done
+wait
+
