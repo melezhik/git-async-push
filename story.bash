@@ -18,8 +18,11 @@ if ($project){
   exit unless $p eq $project;
 }
 
-print "(cd $wd/$p && git pull $git_remote/$p.git ; git config credential.helper \"cache --timeout=30000000\" &&  \\
-git push --set-upstream $git_remote/$p.git master  -q",
+exit unless -d "$wd/$p/.git/";
+
+print "(cd $wd/$p && git pull $git_remote/$p.git -q >/dev/null; \\
+git push --set-upstream $git_remote/$p.git master  -q > /dev/null && echo $git_remote/$p.git updated",
 " || echo $p -- failed ) & \n"' {} $local_dir \; | bash && echo git-async-push-done
 wait
+
 
